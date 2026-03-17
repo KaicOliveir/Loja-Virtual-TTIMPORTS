@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Contato - T Imports</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+
+body{
+    background:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.contato-container{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.contato-titulo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.contato-titulo h1{
+    color:#ff7a00;
+    font-size:40px;
+}
+
+.contato-box{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contato-info{
+    flex:1;
+}
+
+.contato-info h3{
+    color:#ff7a00;
+    margin-bottom:10px;
+}
+
+.contato-form{
+    flex:1;
+}
+
+.contato-form input,
+.contato-form textarea{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:6px;
+}
+
+.contato-form button{
+
+    background:#ff7a00;
+    color:white;
+    padding:14px;
+    border:none;
+    width:100%;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.contato-form button:hover{
+    background:#ff8c1a;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="contato-container">
+
+<div class="contato-titulo">
+<h1>Fale Conosco</h1>
+<p>Entre em contato com nossa equipe.</p>
+</div>
+
+<div class="contato-box">
+
+<div class="contato-info">
+
+<h3>📍 Endereço</h3>
+<p>Jacobina - Bahia</p>
+
+<h3>📞 Telefone</h3>
+<p>+55 (74) 8837-5647</p>
+
+<h3>📧 Email</h3>
+<p>contato@timports.com</p>
+
+<h3>🕒 Horário</h3>
+<p>Segunda a Sexta - 08h às 18h</p>
+
+</div>
+
+<div class="contato-form">
+
+<form>
+
+<input type="text" placeholder="Seu nome" required>
+
+<input type="email" placeholder="Seu email" required>
+
+<input type="text" placeholder="Assunto">
+
+<textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+
+<button type="submit">
+Enviar mensagem
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

@@ -11,7 +11,6 @@
         <header>
             <div class="interface">
                 <div class="logo">
-                    <a href="index.html"></a>
                     <img src="../assets/img/logo.png" alt="TTIMPORTS" width="125px">
                 </div> 
                 <div class="navbar">
@@ -26,8 +25,8 @@
                         </ul>
                     </nav>
                     <img src="../assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
-                    <a href="./paginas-web/checkout.html">
-                        <img src="../assets/img/logo.png" alt="Carrinho" width="30px" height="30px">
+                    <a href="../paginas-web/checkout.html">
+                        <img src="../assets/img/carrinho.png" alt="Carrinho" width="30px" height="30px">
                     </a>
                 </div>
             </div> <!--FIM DA INTERFACE-->
@@ -394,4 +393,20 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
+<script>
+var MenuItens = document.getElementById("MenuItens");
+
+MenuItens.style.maxHeight = "0px";
+
+function menucelular(){
+    if(MenuItens.style.maxHeight == "0px")
+    {
+        MenuItens.style.maxHeight = "300px";
+    }
+    else
+    {
+        MenuItens.style.maxHeight = "0px";
+    }
+}
+</script>
 </html>

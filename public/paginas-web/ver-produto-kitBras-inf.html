@@ -13,7 +13,6 @@
         <header>
             <div class="interface">
                 <div class="logo">
-                    <a href="index.html"></a>
                     <img src="../assets/img/logo.png" alt="TTIMPORTS" width="125px">
                 </div>
                 <div class="navbar">
@@ -236,5 +235,20 @@ Confeccionada com tecido leve e respirável, ela garante excelente caimento e co
     <script src="../assets/js/carrinho.js"></script>
     <script src="../assets/js/checkout.js"></script>
 </body>
+<script>
+var MenuItens = document.getElementById("MenuItens");
 
+MenuItens.style.maxHeight = "0px";
+
+function menucelular(){
+    if(MenuItens.style.maxHeight == "0px")
+    {
+        MenuItens.style.maxHeight = "300px";
+    }
+    else
+    {
+        MenuItens.style.maxHeight = "0px";
+    }
+}
+</script>
 </html>

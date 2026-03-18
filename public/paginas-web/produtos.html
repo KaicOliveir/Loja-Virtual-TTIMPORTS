@@ -1,62 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual TTIMPORTS</title>
+
+    <title>TTIMPORTS | Camisas de Futebol</title>
+
     <link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
+
+
 <body>
+
+
+    <!-- MENU -->
+
     <div class="novo-menu">
+
         <header>
+
             <div class="interface">
+
                 <div class="logo">
-                    <img src="../assets/img/logo.png" alt="TTIMPORTS" width="125px">
-                </div> 
+                    <img src="../assets/img/logo.png" alt="TTIMPORTS" width="125">
+                </div>
+
                 <div class="navbar">
-                    <!-- INICIO DA NAVEGAÇÃO -->
+
                     <nav>
                         <ul id="MenuItens">
-                            <li><a href="index.html" title="">Inicio</a></li>
-                            <li><a href="produtos.html" title="">Produtos</a></li>
-                            <li><a href="" title="">Empresa</a></li>
-                            <li><a href="contato.html" title="">Contatos</a></li>
-                            <li><a href="" title="">Minha conta</a></li>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="produtos.html">Produtos</a></li>
+                            <li><a href="#">Empresa</a></li>
+                            <li><a href="contato.html">Contatos</a></li>
+                            <li><a href="#">Minha conta</a></li>
                         </ul>
                     </nav>
-                    <img src="../assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
+
+                    <img src="../assets/img/menu.png" class="menu-celular" onclick="menucelular()">
+
                     <a href="../paginas-web/checkout.html">
-                        <img src="../assets/img/carrinho.png" alt="Carrinho" width="30px" height="30px">
-                    </a>
+                        <img src="./assets/img/carrinho-finalizar-compras.png" alt="Carrinho" width="60"
+                            style="filter: invert(1); cursor:pointer;"> </a>
+
                 </div>
-            </div> <!--FIM DA INTERFACE-->
+
+            </div>
+
         </header>
 
-        <!-- INICIO BANNER -->
-        <!-- FIM BANNER -->
     </div>
-    <!-- INICIO DAS CATEGORIAS -->
 
-    <!-- INICIO PRODUTOS EM DESTAGUES -->
+
+    <!-- PRODUTOS -->
+
     <div class="corpo-categorias">
 
-        <linha class="linha linha2">
-            <h2>TODOS</h2>
-            <select name="" id="">
-                <option value="">Mais comprados</option>
-                <option value="">Crianças</option>
-                <option value="">Femenino</option>
-                <option value="">Masculino</option>
-            </select>
-        </linha>
+        <div class="linha linha2">
 
+            <h2>TODOS</h2>
+
+            <div class="filtro-container">
+
+                <select id="filtroCategoria">
+
+                    <option value="todos">Todos</option>
+                    <option value="infantil">Crianças</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+
+                </select>
+
+                <button onclick="filtrarProdutos()" class="btn-filtrar">
+                    Filtrar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- LISTA DE PRODUTOS -->
 
         <div class="linha">
-              <div class="col-4">
-                <a href="ver-produto_brazil_M.html"  title="Brazil Home">
-                    <img src="../imagens Anderson/Brasil.jpg" alt="">
+
+
+            <div class="col-4 produto" data-categoria="masculino">
+
+                <a href="ver-produto_brazil_M.html">
+                    <img src="../imagens Anderson/Brasil.jpg">
                 </a>
+
                 <h4>Brazil 2026 Home Jersey S - UNISEX</h4>
+
                 <div class="classsificacao">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
@@ -64,34 +103,21 @@
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                 </div>
-                <p>R$ 180,80</p>
 
-             </div>
-
-             <div class="col-4">
-                <a href="ver-produto-femi-braz.html"  title="Brazil Home">
-                    <img src="../imagens Anderson/combo feme-brazil/frente.jpg" alt="">
-                </a>
-                
-                <h4>Brazil 26/27 Women's Home Jersey S-XXL</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
                 <p>R$ 180,80</p>
 
             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <a href="ver-produto-kitBras-inf.html"  title="Brazil Home">
-                    <img src="../imagens Anderson/como kit brasil infantil/frente.jpg" alt="">
+
+
+
+            <div class="col-4 produto" data-categoria="feminino">
+
+                <a href="ver-produto-femi-braz.html">
+                    <img src="../imagens Anderson/combo feme-brazil/frente.jpg">
                 </a>
-                <h4>Brazil 2025 Home Kids Kit Jersey SIZE:16-28</h4>
+
+                <h4>Brazil 26/27 Women's Home Jersey</h4>
+
                 <div class="classsificacao">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
@@ -99,16 +125,43 @@
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                 </div>
+
+                <p>R$ 180,80</p>
+
+            </div>
+
+
+
+            <div class="col-4 produto" data-categoria="infantil">
+
+                <a href="ver-produto-kitBras-inf.html">
+                    <img src="../imagens Anderson/como kit brasil infantil/frente.jpg">
+                </a>
+
+                <h4>Brazil 2025 Kids Kit Jersey</h4>
+
+                <div class="classsificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+
                 <p>R$ 200,00</p>
 
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <a href="./ver-produto-Brazil 2026 Away Player copy.html"  title="Brazil Home">
-                    <img src="../imagens Anderson/Brasil-azul-jogador.jpg" alt="">
+            </div>
+
+
+
+            <div class="col-4 produto" data-categoria="masculino">
+
+                <a href="./ver-produto-Brazil 2026 Away Player copy.html">
+                    <img src="../imagens Anderson/Brasil-azul-jogador.jpg">
                 </a>
+
                 <h4>Brazil 2026 Away Player Version Jersey</h4>
+
                 <div class="classsificacao">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
@@ -116,297 +169,177 @@
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                 </div>
+
                 <p>R$ 997,90</p>
 
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-            
+            </div>
+
         </div>
 
-        <!-- NOVOS PRODUTOS EM DESTAGUES -->
+
+
         <h2 class="titulo">Novos Produtos</h2>
 
+
         <div class="linha">
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <img src="../imagens Anderson/Ferrari F1 Jacket - Red S-5XL.jpg" alt="">
-                <h4>Ferrari F1 Jacket - Red S-5XL</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
 
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <img src="../imagens Anderson/Sevilla Windbreaker - Red S-XXL.jpg" alt="">
-                <h4>Sevilla Windbreaker - Red S-XXL</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
+            <div class="col-4 produto" data-categoria="masculino">
+                <img src="../imagens Anderson/Ferrari F1 Jacket - Red S-5XL.jpg">
+                <h4>Ferrari F1 Jacket</h4>
                 <p>R$ 997,90</p>
+            </div>
 
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <img src="../imagens Anderson/Real Madrid Windbreaker - Navy Blue & White S-XXL.jpg" alt="">
-                <h4>Real Madrid Blue & White Windbreaker</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
+            <div class="col-4 produto" data-categoria="masculino">
+                <img src="../imagens Anderson/Sevilla Windbreaker - Red S-XXL.jpg">
+                <h4>Sevilla Windbreaker</h4>
                 <p>R$ 997,90</p>
+            </div>
 
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
-            <!-- INICIO ITEM LINHA PRODUTOS EM DESTAGUES -->
-             <div class="col-4">
-                <img src="../imagens Anderson/France Retro Windbreaker - White & Blue.jpg" alt="">
-                <h4>France Retro White & Blue Windbreaker</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
+            <div class="col-4 produto" data-categoria="feminino">
+                <img src="../imagens Anderson/Portugal 2026 Home Women's.jpg">
+                <h4>Portugal 2026 Women's</h4>
                 <p>R$ 997,90</p>
+            </div>
 
-             </div>
-             <div class="col-4">
-                <img src="../imagens Anderson/German 1996 Retro Windbreaker.jpg" alt="">
-                <h4>German 1996 Retro Windbreaker</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
+            <div class="col-4 produto" data-categoria="infantil">
+                <img src="../imagens Anderson/women Flamengo home S-XXL.jpg">
+                <h4>Flamengo Kids</h4>
                 <p>R$ 997,90</p>
+            </div>
 
-             </div>
-             <div class="col-4">
-                <img src="../imagens Anderson/Spain 2026 Home Player Version Jersey.jpg" alt="">
-                <h4>Spain 2026 Home Player Version Jersey</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-             <div class="col-4">
-                <img src="../imagens Anderson/Spain 2026 Goalkeeper - Blue Jersey.jpg" alt="">
-                <h4>Spain 2026- Blue Jersey Goalkeeper</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-             <div class="col-4">
-                <img src="../imagens Anderson/Portugal 2026 Special Edition.jpg" alt="">
-                <h4>Portugal 2026 Special Edition</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-             <div class="col-4">
-                <img src="../imagens Anderson/Portugal 2026 Commemorative Edition.jpg" alt="">
-                <h4>Portugal 2026 Commemorative</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/Argentina 2026 Home Player.jpg" alt="">
-                <h4>Argentina 2026 Home Player</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/Portugal 2026 Home Women's.jpg" alt="">
-                <h4>Portugal 2026 Home Women's</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/Portugal 2026 Special Edition - Women's.jpg" alt="">
-                <h4>Portugal 2026 Special Edition Women's</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/Sport Recife - Women's.jpg" alt="">
-                <h4>Sport Recife 25/26 Women's - Pink</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/Bahia Women Goalkeeper-Yellow.jpg" alt="">
-                <h4>Bahia 25/26 Women Goalkeeper-Yellow</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <div class="col-4">
-                <img src="../imagens Anderson/women Flamengo home S-XXL.jpg" alt="">
-                <h4>25/26 women Flamengo home</h4>
-                <div class="classsificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>R$ 997,90</p>
-
-             </div>
-            <!-- FIM ITEM LINHA PRODUTOS EM DESTAGUES -->
         </div>
 
-         <!--INICIO PAGINAÇÃO DO SITE TT IMPORTS  -->
-        <div class="paginacao">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>&#8594;</span>
-        </div>
-
-        <!--FIM PAGINAÇÃO DO SITE TT IMPORTS  -->
     </div>
-    <!--INICIO DOS RODAPÉ  -->
+
+
+    <!-- RODAPÉ -->
+
     <footer class="rodape">
+
         <div class="container">
+
             <div class="linha">
+
                 <div class="rodape-col-1">
+
                     <h3>Baixe o nosso app</h3>
-                    <p>Baixe nosso aplicativos nas melhores plataformas</p>
+
+                    <p>Baixe nosso aplicativo</p>
+
                     <div class="app-logo">
-                        <img src="../assets/img/google.png" alt="">
-                        <img src="../assets/img/apple.png" alt="">
+
+                        <img src="../assets/img/google.png">
+                        <img src="../assets/img/apple.png">
+
                     </div>
+
                 </div>
+
+
                 <div class="rodape-col-2">
-                    <img src="../assets/img/logo-2.png" alt="">
-                    <p>Lorem ipsum dolor sit amet . Os operadores gráficos</p>
+
+                    <img src="../assets/img/logo-2.png">
+
+                    <p>As melhores camisas de futebol do mercado.</p>
+
                 </div>
+
+
                 <div class="rodape-col-3">
+
                     <h3>Mais informações</h3>
+
                     <ul>
                         <li>Cupons</li>
                         <li>Blog</li>
                         <li>Politica de Privacidade</li>
                         <li>Contatos</li>
                     </ul>
+
                 </div>
+
+
                 <div class="rodape-col-4">
-                     <h3>Redes Sociais</h3>
+
+                    <h3>Redes Sociais</h3>
+
                     <ul>
                         <li>Facebook</li>
-                        <li>instagram</li>
+                        <li>Instagram</li>
                         <li>Twitter</li>
                         <li>Youtube</li>
                     </ul>
+
                 </div>
+
             </div>
+
             <hr>
+
             <p class="direitos">
-                &#169; Todos os direitos reservados a TTIMPORTS.COM.BR - KAIC BISPO
+
+                © TTIMPORTS.COM.BR
+
             </p>
+
         </div>
 
     </footer>
-    <!--FIM DOS RODAPÉ  -->
 
-    
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="assets/js/app.js"></script>
-</body>
-<script>
-var MenuItens = document.getElementById("MenuItens");
 
-MenuItens.style.maxHeight = "0px";
 
-function menucelular(){
-    if(MenuItens.style.maxHeight == "0px")
-    {
-        MenuItens.style.maxHeight = "300px";
-    }
-    else
-    {
+    <script>
+
+        /* MENU MOBILE */
+
+        var MenuItens = document.getElementById("MenuItens");
+
         MenuItens.style.maxHeight = "0px";
-    }
-}
-</script>
+
+        function menucelular() {
+
+            if (MenuItens.style.maxHeight == "0px") {
+                MenuItens.style.maxHeight = "300px";
+            }
+
+            else {
+                MenuItens.style.maxHeight = "0px";
+            }
+
+        }
+
+
+        /* FILTRO DE PRODUTOS */
+
+        function filtrarProdutos() {
+
+            const categoria = document.getElementById("filtroCategoria").value;
+
+            const produtos = document.querySelectorAll(".produto");
+
+            produtos.forEach(function (produto) {
+
+                if (categoria === "todos") {
+                    produto.style.display = "block";
+                }
+
+                else if (produto.dataset.categoria === categoria) {
+                    produto.style.display = "block";
+                }
+
+                else {
+                    produto.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+
 </html>
